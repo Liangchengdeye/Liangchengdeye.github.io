@@ -7,6 +7,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: LiangChengDeYe
+title_home: 吴浩杰| 吴浩杰
 SEOTitle:  LiangChengDeYe | LiangChengDeYe's Blog
 header-img: img/home-bg.jpg
 email: 415900617@QQ.com
@@ -27,6 +28,9 @@ email: 415900617@qq.com
 weibo_username: /u/5406340504
 zhihu_username: liang-cheng-de-ye/activities
 description_footer: 吴浩杰个人专栏！
+csdn_link: https://blog.csdn.net/sinat_32651363
+jianshu_link: https://www.jianshu.com/u/ad41238ebf6e
+wangyi_link: https://www.baidu.com
 # statistic analysis 统计代码
 # 百度统计 id，将统计代码替换为自己的百度统计id，即
 # hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
@@ -51,7 +55,7 @@ paginate: 8
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "人生苦短，但生命又那么有趣，去探索吧！"
+sidebar-about-description: "人生苦短，但生活有趣呀！"
 sidebar-avatar: /img/avatar-ling.jpg
 
 

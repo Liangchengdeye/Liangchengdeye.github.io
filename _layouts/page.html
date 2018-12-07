@@ -85,7 +85,7 @@ layout: default
                 {% if site.featured-tags %}
                 <section>
                     <hr class="hidden-sm hidden-xs">
-                    <h5><a href="{{'/tags/' | prepend: site.baseurl }}">FEATURED TAGS</a></h5>
+                    <h5><a href="{{'/tags/' | prepend: site.baseurl }}">FEATURED TAGS| 标签</a></h5>
                     <div class="tags">
                         {% for tag in site.tags %}
                            {% if tag[1].size > site.featured-condition-size %}
@@ -100,13 +100,13 @@ layout: default
 
                 <!-- Short About -->
                 <section class="visible-md visible-lg">
-                    <hr><h5><a href="{{'/about/' | prepend: site.baseurl }}">ABOUT ME</a></h5>
+                    <hr><h5><a href="{{'/about/' | prepend: site.baseurl }}">ABOUT ME| 关于我</a></h5>
                     <div class="short-about">
                         {% if site.sidebar-avatar %}
                             <img src="{{site.sidebar-avatar}}" />
                         {% endif %}
                         {% if site.sidebar-about-description %}
-                            <p>{{site.sidebar-about-description}}</p>
+                        <p style="color: black">{{site.sidebar-about-description}}</p>
                         {% endif %}
                         <!-- SNS Link -->
                         <ul class="list-inline">
@@ -135,7 +135,7 @@ layout: default
                                 <a target="_blank" href="https://www.zhihu.com/people/{{ site.zhihu_username }}">
                                     <span class="fa-stack fa-lg">
                                         <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa  fa-stack-1x fa-inverse">知</i>
+                                        <i class="fa  fa-stack-1x fa-inverse" style="background-color: #0084FF;border-radius: 50%;">知</i>
                                     </span>
                                 </a>
                             </li>
@@ -145,7 +145,7 @@ layout: default
                                 <a target="_blank" href="http://weibo.com/{{ site.weibo_username }}">
                                     <span class="fa-stack fa-lg">
                                         <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                                        <i class="fa fa-weibo fa-stack-1x fa-inverse" style="background-color: #F76C23;border-radius: 50%;"></i>
                                     </span>
                                 </a>
                             </li>
@@ -165,7 +165,7 @@ layout: default
                                 <a target="_blank" href="https://github.com/{{ site.github_username }}">
                                     <span class="fa-stack fa-lg">
                                         <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                        <i class="fa fa-github fa-stack-1x fa-inverse" style="background-color: #404040;border-radius: 50%;"></i>
                                     </span>
                                 </a>
                             </li>
@@ -180,13 +180,47 @@ layout: default
                                 </a>
                             </li>
                             {% endif %}
+                            <!--csdn-->
+                                {% if site.csdn_link %}
+                            <li>
+                                <a target="_blank" href="{{ site.csdn_link }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-stack-1x fa-inverse" style="background-color: #CC0001;border-radius: 50%;"><b>C</b></i>
+                                    </span>
+                                </a>
+                            </li>
+                            {% endif %}
+                            <!--简书-->
+                            {% if site.jianshu_link %}
+                            <li>
+                                <a target="_blank" href="{{ site.csdn_link }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-stack-1x fa-inverse" style="background-color: #E45E45;border-radius: 50%;">简</i>
+                                    </span>
+                                </a>
+                            </li>
+                            {% endif %}
+                            <!--网易-->
+                            {% if site.wangyi_link %}
+                            <li>
+                                <a target="_blank" href="{{ site.wangyi_link }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-stack-1x fa-inverse" style="background-color: #E20000;border-radius: 50%;">易</i>
+                                    </span>
+                                </a>
+                            </li>
+                            {% endif %}
+
                         </ul>
                     </div>
                 </section>
                 <!-- Friends Blog -->
                 {% if site.friends %}
                 <hr>
-                <h5>FRIENDS</h5>
+                <h5>FRIENDS| 友情链接</h5>
                 <ul class="list-inline">
                     {% for friend in site.friends %}
                         <li><a href="{{friend.href}}">{{friend.title}}</a></li>
