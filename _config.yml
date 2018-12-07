@@ -6,29 +6,35 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Ling's Blog
-SEOTitle:  Ling Lin | Ling's Blog
+title: LiangChengDeYe
+SEOTitle:  LiangChengDeYe | LiangChengDeYe's Blog
 header-img: img/home-bg.jpg
-email: linglinyp@163.com
+email: 415900617@QQ.com
 description: "欢迎来到我的个人博客"
-keywords: "Ling Lin, Lin Ling, 博客，前端，IT，网页设计，随笔"
+keywords: "吴浩杰, 博客，Java，IT，Python，爬虫"
 baseurl: ""
-url: "http://linglinyp.com"
+url: "https://liangchengdeye.github.io"
 
-
+permalink: /:year/:month/:day/:title/
 # Author 
-author: "Ling Lin"
+author: "LiangChengDeYe"
 
 # SNS settings
-# github_username:  "lingLinyp"
-# facebook_username: "linglinyp"
-weibo_username: "lingLinyp"
-# linkedin_username: "linglinyp"
 
-
+github_username:  Liangchengdeye
+github_link: https://github.com/Liangchengdeye?tab=repositories
+email: 415900617@qq.com
+weibo_username: /u/5406340504
+zhihu_username: liang-cheng-de-ye/activities
+description_footer: 吴浩杰个人专栏！
+# statistic analysis 统计代码
+# 百度统计 id，将统计代码替换为自己的百度统计id，即
+# hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
+# xxxxx字符串
+baidu_tongji_id: 00f396a2922bd4d7660cb3f9208c96d9
 
 # Comments   
-disqus_username: linglinyp
+disqus_username: Liangchengdeye
 
 
 # Build settings
@@ -45,15 +51,8 @@ paginate: 8
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "人生太短，世界又这么大，我想留下属于自己的足迹"
-sidebar-avatar: /img/avatar-ling.jpg  
-
-# Analytics settings
-# Baidu Analytics
-ba_track_id: 2da173f5cd6d257eaf32e843dca68895
-# Google Analytics
-ga_track_id: 'UA-98278066-1'            # Format: UA-xxxxxx-xx
-ga_domain: linglinyp.com
+sidebar-about-description: "人生苦短，但生命又那么有趣，去探索吧！"
+sidebar-avatar: /img/avatar-ling.jpg
 
 
 exclude:
@@ -94,6 +93,12 @@ friends: [
        
        title: "Secret Blog",
        href: "https://blog.isecret.vip/"
+     },{
+       title: "Itgoyo",
+       herf: "https://itgoyo.github.io/gallery.html"
+     },{
+       title: "linglinyp",
+       herf: "http://linglinyp.com/"
      }
 
 ]
