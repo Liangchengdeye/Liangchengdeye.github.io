@@ -2,155 +2,159 @@
 layout: page
 title_ch: 关于我
 title: ABOUT ME
-description: "Hi, this is Lin, nice to meet you."
+description: "Hi, this is HaoJie Wu, nice to meet you."
 header-img: "img/about-bg.jpg"
+tags:
+    - 生活
+    - 随笔
 ---
 
-<!-- Language Selector -->
-<select onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
-    <option value="0" selected> 中文 Chinese </option>
-    <option value="1"> 英语 English </option>
-</select>
+<script type="text/javascript">
+    window.onload= function() {
+        var myDate = new Date();
+        var now = myDate.toLocaleDateString();     //获取当前日期
+         document.getElementById('count_time').innerHTML=now;
+    }
+</script>
 
-<!-- Chinese Version -->
+<style>
+    .post-container img{
+        margin: 0 0;
+    }
+    p{
+        margin: 20px 0;
+    }
+    .post-container ul, .post-container ol{
+        margin: 0 0;
+    }
+    #img_id{
+        width: 160px;
+        height: 190px;
+        float: left;
+    }
+    #jianjie{
+
+        float: left;
+    }
+    .title_style{
+        font-size: 18px;
+        padding-left: 8px;
+        font-weight: bold;
+    }
+    .line_title{
+        list-style-type: square
+    }
+    .line_text{
+        margin-bottom: 10px;
+    }
+    .thanks_img{
+        width: 50px;
+        height: 50px;
+        float: left;
+        /*margin-left: 10px;*/
+        padding-left: 10px;
+    }
+</style>
+
 <div class="zh post-container">
     <blockquote>
-       生命不止，折腾不息
+       人不疯狂枉年少，且狂，且痴，且醉。
     </blockquote>
-
-    <h3>Why blog?</h3>
     <hr>
-    <p>人生太精彩，我想用博客记录生活中的点滴。
-
-    本博客自2016年12月7日起开始运行至今，共35篇文章，总字数 
-    {% assign count = 0 %}
-   {% for post in site.posts %}
-    {% assign single_count = post.content | strip_html | strip_newlines | size %}
-    {% assign count = count | plus: single_count %}
-    {% endfor %}
-
-   {% if count > 10000 %}
-    {{ count | divided_by: 10000 }} 万 {{ count | modulo: 10000 }}
-{% else %}
-    {{ count }}
-{% endif %}
-。</p>
-
-    <h3>Me</h3>
-    <p>一只蒟蒻的前端小菜鸟，也许这一辈子都会是吧</p>
-    <p> &nbsp;<i class="fa fa-spin fa-star" aria-hidden="true" style="color:#0085A1"></i>&nbsp;爱自由，</p>
-    <p>不喜欢被束缚，热衷于想做的事，别人爱说就说去吧，做好自己呗</p>
-    <p> &nbsp;<i class="fa fa-spin fa-star" aria-hidden="true" style="color:#0085A1"></i>&nbsp;爱旅游，</p>
-    <p>读万卷书，我读过得书很少；行万里路，世界这么大，我去过的地方也太少</p>
-    <p> &nbsp;<i class="fa fa-spin fa-star" aria-hidden="true" style="color:#0085A1"></i>&nbsp;爱倾听，</p>
-    <p>在倾听中也许会帮到别人更重要的是可以认真反省自己</p>
-
-  
-
-    <h3>Thanks</h3>
-    <hr>
-    <p>本博客的主题来自<a href="http://huangxuan.me/" target="_blank">Hux</a>同学，很喜欢这种简单明快的风格。另外得感谢jekyll、github pages，当然还要感谢Font Awesome提供这么方便的icon。</p>
-
-</div>
-
-<!-- English Version -->
-<div class="en post-container">
-    <blockquote>
-        Everyone should have a dream.<br>Once you have a dream and believe in it. Nothing can stop you!!! 
-    </blockquote>
-    
-    <p>Hi, I am Ling used to be an International Hospitality and Tourism Management student at Bournemouth University. And now working as a FM helpdesk analyst at <a href="https://www.kaust.edu.sa/en" target="_blank">KAUST</a></p>
-
-    <p>I am always keen to learn new things and broaden my horizon.So, I never regret trying. Hope one day my dream come true.</p>
-
-    <p>The Meaning Of My Name:
-
-    <img src="{{ site.baseurl }}/img/Lin-meaning.jpg">
-    </p>
-
-    <p style="text-align:right;">
-    -- From <a href="http://www.urbandictionary.com/define.php?term=Lin" target="_blank">Urban Dictionary</a>
-    </p>
-
-
-</div>
-
-<!-- Handle Language Change -->
-<script type="text/javascript">
-    var $zh = document.querySelector(".zh");
-    var $en = document.querySelector(".en");
-    function onLanChange(index){
-        if(index == 0){
-            $zh.style.display = "block";
-            $en.style.display = "none";
-        }else{
-            $en.style.display = "block";
-            $zh.style.display = "none";
-        }
-    }
-    onLanChange(0);
-</script>
-
-
-
-{% if site.duoshuo_username %}
-<!-- 多说评论框 start -->
-<div class="comment">
-    <div class="ds-thread"
-    {% if site.duoshuo_username == "huxblog" %}
-        data-thread-id="1187623191091085319"
-    {% else %}
-        data-thread-key="{{site.duoshuo_username}}/about"
-    {% endif %}
-
-    data-title="{{page.title}}"
-    data-url="{{site.url}}/about/"></div>
-</div>
-<!-- 多说评论框 end -->
-
-<!-- Duoshuo hacking -->
-<input id="dsUser" type="hidden" value="{{site.duoshuo_username}}"  />
-
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    // dynamic User hacking by Hux
-    var _user = document.getElementById('dsUser').value;
-    // duoshuo comment query.
-    var duoshuoQuery = {short_name: _user };
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0]
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-</script>
-<!-- 多说公共JS代码 end -->
-{% endif %}
-
-
-{% if site.disqus_username %}
-<!-- disqus 评论框 start -->
-<div class="comment">
-    <div id="disqus_thread" class="disqus-thread">
+<div>
+    <div id="img_id"><img src="/img/in-post/about/me.jpg"></div>
+    <div id="jianjie">
+        <h3><img src="/img/in-post/about/man.png" style="display: inline-block; width: 35px ;height:35px;margin: 0 15px 0 8px">吴浩杰</h3>
+        <ul>
+            <li>
+                <img src="/img/in-post/about/sex.png" style="display: inline-block; width: 20px ;height: 20px;"><span style="margin-left: 10px">男</span>
+            </li>
+            <li>
+                <img src="/img/in-post/about/gps.png" style="display: inline-block; width: 20px ;height: 20px"><span style="margin-left: 10px">北京-朝阳</span>
+            </li>
+            <li>
+                <img src="/img/in-post/about/phone.png" style="display: inline-block; width: 20px ;height: 20px"><span style="margin-left: 10px">18500148965</span>
+            </li>
+            <li>
+                <img src="/img/in-post/about/email.png" style="display: inline-block; width: 20px ;height: 20px"><span style="margin-left: 10px">415900617@QQ.com</span>
+            </li>
+        </ul>
 
     </div>
 </div>
-<!-- disqus 评论框 end -->
+    <p style="clear: both;margin: 0 0;">&nbsp;&nbsp;&nbsp;&nbsp;用博客记录生活和工作的点点滴滴，苔花如米小，也学牡丹开，
+        纵使自己很渺小，但一定会给这个世界增添点点温暖。年轻为自己而奋斗，年老，就让回忆去祭奠一切吧！<br>
+        <li>截至：<span id="count_time">
 
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = "{{site.disqus_username}}";
-    var disqus_identifier = "{{site.disqus_username}}/{{page.url}}";
-    var disqus_url = "{{site.url}}{{page.url}}";
+        </span>&nbsp;&nbsp;共计博文：2&nbsp;篇，博客总字数:
+        {% assign count = 0 %}
+        {% for post in site.posts %}
+        {% assign single_count = post.content | strip_html | strip_newlines | size %}
+        {% assign count = count | plus: single_count %}
+        {% endfor %}
+        {% if count > 10000 %}
+        {{ count | divided_by: 10000 }} 万 {{ count | modulo: 10000 }}
+        {% else %}
+        {{ count }}
+        {% endif %}字</li>
+    </p>
 
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<!-- disqus 公共JS代码 end -->
-{% endif %}
+    <h3>Work Process</h3>
+
+    <p>★ 一枚爬虫工程师，并对大数据处理与分析充满无限的兴趣，享受数据分析之美。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;熟练使用Python---</p>
+    <hr>
+    <h3>工作经历</h3>
+    <!--第三份工作-->
+    <p> &nbsp;<i class="fa fa-spin fa-star" aria-hidden="true" style="color:#0085A1"></i><span class="title_style">宜信-北京致诚信用管理有限公司(依然在职)</span></p>
+    <p>
+        <ul>
+            <li class="line_title"><b>国内主流**网站的数据抓取</b></li>
+            <li class="line_text">对若干招聘网站的数据进行获取，因此各大网站类型不同，因此反爬也各有不同，使用redis-scrapy框架实现分布式数据抓取，并结合kafka对数据进行流式处理，最终入MongoDB。<br>开发语言：PYTHON</li>
+
+            <li class="line_title"></li>
+            <li class="line_text"></li>
+        </ul>
+    </p>
+    <hr>
+    <!--第二份工作-->
+    <p> &nbsp;<i class="fa fa-spin fa-star" aria-hidden="true" style="color:#0085A1"></i><span class="title_style">北京坚果金服科技公司</span></p>
+    <p>
+        <ul>
+            <li class="line_title"><b>大数据数据ETL处理</b></li>
+            <li class="line_text">对风控项目中的海量数据使用本公司自己开发的框架进行ETL处理。职责：风控项目中，对公司数据集数据仓库中的数据配合团队进行ETL操作，处理成需要的数据供团队其他成员使用。<br>开发语言：PYTHON, JAVA </li>
+            <li class="line_title"><b>大数据平台数据处理与监控</b></li>
+            <li class="line_text">对多类服务器及数据库中数据进行ETL处理，并对每日处理结果进行监控预警，动态反馈调整规则，提高数据处理效率。<br>开发语言：PYTHON</li>
+        </ul>
+    </p>
+    <!--第一份工作-->
+    <hr>
+    <p> &nbsp;<i class="fa fa-spin fa-star" aria-hidden="true" style="color:#0085A1"></i><span class="title_style">北京新华多媒体数据有限公司</span></p>
+    <p>
+        <ul>
+            <li class="line_title"><b>主流新闻网站爬虫开发</b></li>
+            <li class="line_text">使用 scrapy 框架对新华网，人民网等多个不同类型主流新闻网站进行抓取数据抓取，结合redis实现多服务器分布式部署抓取，途中主要涉及网页动态加载，通过抓包解决各种请求，并最终实现功能。<br>开发语言：PYTHON</li>
+            <li class="line_title"><b>《影联盟》电影网站开发</b></li>
+            <li class="line_text">模块一前台：主要负责电影详细页的页面搭建工作，实现基本静态网站界面搭建，模块二后台：使用ThinkPhP框架完成与MYSQL的连接并实现前台各类需求完成数据交互工作。 模块三在影院座位排布中进行智能推荐，其中调用 3D 立体框架，实现用户选座时角切换，增强用户体验。<br>开发语言：PHP, HTML, JAVASCRIPT, JQUERY,CSS</li>
+        </ul>
+    </p>
+
+
+
+    <h3>Thanks</h3>
+    <hr>
+    <div>
+        <img src="https://gss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=1d532bc43a4e251ff6faecaac6efa272/6f061d950a7b02082793b61f68d9f2d3562cc8f2.jpg" class="thanks_img">
+        <img src="https://gss3.bdstatic.com/-Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=65720bf5366d55fbd1cb7e740c4b242f/5fdf8db1cb1349544ac68f4f5d4e9258d0094ac4.jpg" class="thanks_img">
+        <img src="/img/in-post/about/creditesae.png" class="thanks_img">
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
