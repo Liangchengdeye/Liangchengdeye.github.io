@@ -7,7 +7,6 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: LiangChengDeYe
-title_home: 吴浩杰| 吴浩杰
 SEOTitle:  LiangChengDeYe | LiangChengDeYe's Blog
 header-img: img/home-bg.jpg
 email: 415900617@QQ.com
@@ -15,7 +14,6 @@ description: "欢迎来到我的个人博客"
 keywords: "吴浩杰, 博客，Java，IT，Python，爬虫"
 baseurl: ""
 url: "https://liangchengdeye.github.io"
-
 permalink: /:year/:month/:day/:title/
 # Author 
 author: "LiangChengDeYe"
@@ -30,7 +28,7 @@ zhihu_username: liang-cheng-de-ye/activities
 description_footer: 吴浩杰个人专栏！
 csdn_link: https://blog.csdn.net/sinat_32651363
 jianshu_link: https://www.jianshu.com/u/ad41238ebf6e
-wangyi_link: https://www.baidu.com
+wangyi_link: https://music.163.com/#/user/home?id=299964197
 # statistic analysis 统计代码
 # 百度统计 id，将统计代码替换为自己的百度统计id，即
 # hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
@@ -94,15 +92,14 @@ friends: [
        href: "http://yipengqin.com/"
     
      },{
-       
        title: "Secret Blog",
        href: "https://blog.isecret.vip/"
      },{
        title: "Itgoyo",
-       herf: "https://itgoyo.github.io/gallery.html"
+       href: "https://itgoyo.github.io/gallery.html"
      },{
        title: "linglinyp",
-       herf: "http://linglinyp.com/"
+       href: "http://linglinyp.com/"
      }
 
 ]

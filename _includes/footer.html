@@ -1,4 +1,40 @@
 <!-- Footer -->
+<style>
+    /*心跳样式*/
+    @keyframes fade {
+    from {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
+.fa-heart {
+    color: #fff;
+    animation: fade 600ms infinite;
+    -webkit-animation: fade 600ms infinite;
+}
+.fa-inverse:hover{
+    color: #0085A1;
+    border-radius: 50%;
+    animation: fade 600ms infinite;
+}
+</style>
 <footer>
     <div class="container">
         <div class="row">
@@ -40,7 +76,7 @@
                         <a target="_blank" href="http://weibo.com/{{ site.weibo_username }}">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse" style="background-color: #F76C23;border-radius: 50%;"></i>
                             </span>
                         </a>
                     </li>
@@ -62,7 +98,7 @@
                         <a target="_blank" href="https://github.com/{{ site.github_username }}">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse" style="background-color: #404040;border-radius: 50%;"></i>
                             </span>
                         </a>
                     </li>
@@ -82,15 +118,17 @@
                                 <a target="_blank" href="{{ site.csdn_link }}">
                                     <span class="fa-stack fa-lg">
                                         <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-stack-1x fa-inverse">C</i>
+                                        <i class="fa fa-stack-1x fa-inverse" style="background-color: #CC0001;border-radius: 50%;">C</i>
                                     </span>
                                 </a>
                             </li>
                     {% endif %}
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright {{ site.time | date: '%Y' }} <i class="fa fa-heart" aria-hidden="true" style="color: #0085A1"></i>  LiangChengDeYe. Powered by Jekyll & GitHub.</span>
-<a href="https://blog.csdn.net/sinat_32651363" target="_blank"> Hello, Welcome to my CSDN blog!</a><span id="busuanzi_value_site_uv"></span></p>
+                    Copyright {{ site.time | date: '%Y' }} <i class="fa fa-heart" aria-hidden="true" style="color: #CC0001"></i>  LiangChengDeYe. Powered by Jekyll & GitHub.</span>
+<a href="{{ site.csdn_link }}" target="_blank"> Hello, Welcome to my CSDN blog!</a><span id="busuanzi_container_site_pv">
+                    <br>
+                    本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
                     <p class="copyright text-muted" id="count"></p>
 
 
@@ -98,7 +136,8 @@
         </div>
     </div>
 </footer>
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!--统计访问量-->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 <script>
   

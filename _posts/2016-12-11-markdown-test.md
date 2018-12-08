@@ -5,8 +5,6 @@ subtitle: "Markdown Tutorial"
 categories: Study
 tags: 
    - 学习笔记
-   - Markdown
-
 ---
 > 从今天开始学习markdown 标记语言 ，希望不用花太长时间
 

@@ -1,8 +1,9 @@
 ---
 layout: default
+title_ch: 文章分类
 title: CATEGORIES
 description: "文章分类"
-header-img: "img/categories-bg.jpg"
+header-img:  "/img/categrories-bg.jpg"
 ---
 
 <header class="intro-header" style="background-image: url('{{ site.baseurl }}{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
@@ -18,7 +19,6 @@ header-img: "img/categories-bg.jpg"
         </div>
     </div>
 </header>
-
 <div class="col-sm-2 col-sm-offset-2 col-xs-5">
     <ul class="nav nav-tabs-vertical">
       {% assign categories_list = site.categories %}
