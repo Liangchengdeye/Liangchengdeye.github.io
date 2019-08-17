@@ -1,3 +1,13 @@
+---
+layout: post
+title: flask 实现 flask Restful
+subtitle: flask 实现 flask Restful
+categories: Code
+tags:
+    - 程序笔记
+    - LINUX 
+    - flask
+---
 # flask 实现 flask Restful
 什么是restful网上解释很多，怎么用flask实现restful例子也数不胜数，可自行查阅，本篇主要是不同风格实现restful时候的安全认证。
 

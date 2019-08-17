@@ -1,3 +1,14 @@
+---
+layout: post
+title: 开发各类文档笔记，python，Linux，hadoop 
+subtitle: 开发各类文档笔记，python，Linux，hadoop 
+categories: Code
+tags:
+    - 程序笔记
+    - LINUX 
+    - Linux
+	- hadoop
+---
 # 开发各类文档笔记，python，Linux，hadoop 
 
 #  python相关模块
