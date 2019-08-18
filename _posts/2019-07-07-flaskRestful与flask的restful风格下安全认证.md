@@ -1,7 +1,7 @@
 ---
 layout: post
 title: flask 实现 flask Restful
-subtitle: flask 实现 flask Restful
+subtitle: flask实现flask Restful
 categories: Code
 tags:
     - 程序笔记
