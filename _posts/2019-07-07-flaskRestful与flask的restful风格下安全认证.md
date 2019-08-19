@@ -1,19 +1,20 @@
 ---
+published: true
 layout: post
-title: flask ÊµÏÖ flask Restful
-subtitle: flaskÊµÏÖflask Restful
+title: flask å®ç° flask Restful
+subtitle: flaskå®ç°flask Restful
 categories: Code
 tags:
-    - ³ÌĞò±Ê¼Ç
+    - ç¨‹åºç¬”è®°
     - LINUX 
     - flask
 ---
-# flask ÊµÏÖ flask Restful
-Ê²Ã´ÊÇrestfulÍøÉÏ½âÊÍºÜ¶à£¬ÔõÃ´ÓÃflaskÊµÏÖrestfulÀı×ÓÒ²Êı²»Ê¤Êı£¬¿É×ÔĞĞ²éÔÄ£¬±¾ÆªÖ÷ÒªÊÇ²»Í¬·ç¸ñÊµÏÖrestfulÊ±ºòµÄ°²È«ÈÏÖ¤¡£
+# flask å®ç° flask Restful
+ä»€ä¹ˆæ˜¯restfulç½‘ä¸Šè§£é‡Šå¾ˆå¤šï¼Œæ€ä¹ˆç”¨flaskå®ç°restfulä¾‹å­ä¹Ÿæ•°ä¸èƒœæ•°ï¼Œå¯è‡ªè¡ŒæŸ¥é˜…ï¼Œæœ¬ç¯‡ä¸»è¦æ˜¯ä¸åŒé£æ ¼å®ç°restfulæ—¶å€™çš„å®‰å…¨è®¤è¯ã€‚
 
-## ×¢½â·½Ê½ÊµÏÖµÄ°²È«ÈÏÖ¤£¬Ò²ÊÇÍøÉÏÀı×Ó×î¶àµÄ·½Ê½
-ÔÚĞèÒª°²È«ÈÏÖ¤µÄ·½·¨Ç°¼ÓÉÏ°²È«ÈÏÖ¤×¢½â£º@basic_auth.login_required£¬Õâ¸ö·½·¨ÔÚÏÂÒ»¶Î´úÂëÖĞ¡£
-×¢Òâ£ºflask´íÎóÂë»òÕßÈÏÖ¤Ê§°ÜµÄ×´Ì¬ÂëĞèÒªÒÔreturn·½Ê½·µ»Ø£¬Èç£ºreturn make_response(jsonify({'error': 'Not Find'}), 401)£¬¶øflask-restfulÈÏÖ¤Ê§°Ü×´Ì¬ÂëĞèÒÔÖØĞ´abort·½Ê½·µ»Ø£¬ÕâËãÊÇÁ½ÖÖ·½Ê½ÏÂ·µ»ØÈÏÖ¤Ê§°ÜµÄ²îÒì¡£
+## æ³¨è§£æ–¹å¼å®ç°çš„å®‰å…¨è®¤è¯ï¼Œä¹Ÿæ˜¯ç½‘ä¸Šä¾‹å­æœ€å¤šçš„æ–¹å¼
+åœ¨éœ€è¦å®‰å…¨è®¤è¯çš„æ–¹æ³•å‰åŠ ä¸Šå®‰å…¨è®¤è¯æ³¨è§£ï¼š@basic_auth.login_requiredï¼Œè¿™ä¸ªæ–¹æ³•åœ¨ä¸‹ä¸€æ®µä»£ç ä¸­ã€‚
+æ³¨æ„ï¼šflaské”™è¯¯ç æˆ–è€…è®¤è¯å¤±è´¥çš„çŠ¶æ€ç éœ€è¦ä»¥returnæ–¹å¼è¿”å›ï¼Œå¦‚ï¼šreturn make_response(jsonify({'error': 'Not Find'}), 401)ï¼Œè€Œflask-restfulè®¤è¯å¤±è´¥çŠ¶æ€ç éœ€ä»¥é‡å†™abortæ–¹å¼è¿”å›ï¼Œè¿™ç®—æ˜¯ä¸¤ç§æ–¹å¼ä¸‹è¿”å›è®¤è¯å¤±è´¥çš„å·®å¼‚ã€‚
 ```
 #!/usr/bin/python3  
 # encoding: utf-8  
@@ -25,8 +26,8 @@ tags:
 @software: PyCharm 
 @file: flaskBaseRestful.py
 @time: 2019/7/3 17:30 
-@describe: flask ÊµÏÖ flask Restful
-°²È«ÈÏÖ¤²ÉÓÃ×¢½â·½Ê½
+@describe: flask å®ç° flask Restful
+å®‰å…¨è®¤è¯é‡‡ç”¨æ³¨è§£æ–¹å¼
 """
 import json
 import sys
@@ -103,12 +104,12 @@ if __name__ == '__main__':
     app.run(debug=True, port=8080)
 
 ```
-## °²È«ÈÏÖ¤·½·¨Ìå
-²ÉÓÃÁËÁ½ÖÖÈÏÖ¤·½Ê½£¬Ò»ÖÖÎªÓÃ»§ÃûÃÜÂë·½Ê½ÈÏÖ¤£¬Ò»ÖÖÊ¹ÓÃÁîÅÆ£¨Token£©·½Ê½ÈÏÖ¤£¬×îºó²ÉÓÃMultiAuth(basic_auth, token_auth)·½·¨½«Á½ÖÖÈÏÖ¤×ÛºÏÆğÀ´£¬Ö»ÒªÂú×ãÆäÖĞÒ»ÖÖÈÏÖ¤ÔòÈÏÎªÈÏÖ¤Í¨¹ı¡£Í¬»§ÃûÃÜÂë·½Ê½ÈÏÖ¤ÖĞ¶ÔÓÚÃÜÂë²¿·Ö²ÉÓÃgenerate_password_hash£¨£©·½Ê½½øĞĞ¼ÓÃÜ£¬·ñÔòÖ±½Ó±£´æÎªÃ÷ÎÄ²»°²È«£¬¶ÔÓÚÃÜÂëĞ£Ñé£¬Ê¹ÓÃcheck_password_hash£¨£©·½·¨£¬ËäÈ»ÎŞ·¨Ö±½Ó·´ÒåÃÜÂëÔ­ÎÄ£¬µ«ÊÇ¿ÉÒÔ²ÉÓÃ´Ë·½·¨Ö±½Ó±È¶ÔĞÂÊäÈëµÄÃÜÂëÓëÔ­¼ÓÃÜÃÜÂëÊÇ·ñÏàÍ¬¡£
-°²È«ÈÏÖ¤²¿·Ö£¬ÓĞÁ½µã£¬Á½ÖÖ·½Ê½ÂÔÓĞ²»Í¬£ºflask ĞèÒªÒÔreturn ÕâÖÖ·½Ê½·µ»Ø×Ô¶¨ÒåÒì³££ºreturn make_response(jsonify({'error': 'Not Find'}), 401)£»¶ø flask_restful ÔòĞŞ¸Äabort·½Ê½·µ»Ø×Ô¶¨ÒåÒì³££º abort(401, message={'error': 'Unauthorized access'})
-ÓÃ»§ÃûÃÜÂë·½Ê½ÈÏÖ¤£ºÈçÓÃ»§Ãû£ºTom,ÃÜÂë£º111111£»ÈôÇëÇó·½·¨ÖĞ²»Æ¥ÅäÔòÈÏÖ¤Ê§°Ü£»
-ÁîÅÆToken·½Ê½ÈÏÖ¤£ºHTTPTokenAuth(scheme='Bearer')£¬ÁîÅÆBearer£¬Token£ºsecret-token-1£¬Ö»ÓĞÇëÇóÖĞÂú×ãÕâ¸öÈÏÖ¤£¬ÔòÍ¨¹ı£¬²âÊÔ·½·¨£ºcurl -X GET -H "Authorization: **Bearer secret-token-1**" http://localhost:5000/
-¹ØÓÚ°²È«ÈÏÖ¤ÆäËû·½·¨¿É²Î¿¼£º[°²È«ÈÏÖ¤](!https://blog.csdn.net/JackLiu16/article/details/82730727)
+## å®‰å…¨è®¤è¯æ–¹æ³•ä½“
+é‡‡ç”¨äº†ä¸¤ç§è®¤è¯æ–¹å¼ï¼Œä¸€ç§ä¸ºç”¨æˆ·åå¯†ç æ–¹å¼è®¤è¯ï¼Œä¸€ç§ä½¿ç”¨ä»¤ç‰Œï¼ˆTokenï¼‰æ–¹å¼è®¤è¯ï¼Œæœ€åé‡‡ç”¨MultiAuth(basic_auth, token_auth)æ–¹æ³•å°†ä¸¤ç§è®¤è¯ç»¼åˆèµ·æ¥ï¼Œåªè¦æ»¡è¶³å…¶ä¸­ä¸€ç§è®¤è¯åˆ™è®¤ä¸ºè®¤è¯é€šè¿‡ã€‚åŒæˆ·åå¯†ç æ–¹å¼è®¤è¯ä¸­å¯¹äºå¯†ç éƒ¨åˆ†é‡‡ç”¨generate_password_hashï¼ˆï¼‰æ–¹å¼è¿›è¡ŒåŠ å¯†ï¼Œå¦åˆ™ç›´æ¥ä¿å­˜ä¸ºæ˜æ–‡ä¸å®‰å…¨ï¼Œå¯¹äºå¯†ç æ ¡éªŒï¼Œä½¿ç”¨check_password_hashï¼ˆï¼‰æ–¹æ³•ï¼Œè™½ç„¶æ— æ³•ç›´æ¥åä¹‰å¯†ç åŸæ–‡ï¼Œä½†æ˜¯å¯ä»¥é‡‡ç”¨æ­¤æ–¹æ³•ç›´æ¥æ¯”å¯¹æ–°è¾“å…¥çš„å¯†ç ä¸åŸåŠ å¯†å¯†ç æ˜¯å¦ç›¸åŒã€‚
+å®‰å…¨è®¤è¯éƒ¨åˆ†ï¼Œæœ‰ä¸¤ç‚¹ï¼Œä¸¤ç§æ–¹å¼ç•¥æœ‰ä¸åŒï¼šflask éœ€è¦ä»¥return è¿™ç§æ–¹å¼è¿”å›è‡ªå®šä¹‰å¼‚å¸¸ï¼šreturn make_response(jsonify({'error': 'Not Find'}), 401)ï¼›è€Œ flask_restful åˆ™ä¿®æ”¹abortæ–¹å¼è¿”å›è‡ªå®šä¹‰å¼‚å¸¸ï¼š abort(401, message={'error': 'Unauthorized access'})
+ç”¨æˆ·åå¯†ç æ–¹å¼è®¤è¯ï¼šå¦‚ç”¨æˆ·åï¼šTom,å¯†ç ï¼š111111ï¼›è‹¥è¯·æ±‚æ–¹æ³•ä¸­ä¸åŒ¹é…åˆ™è®¤è¯å¤±è´¥ï¼›
+ä»¤ç‰ŒTokenæ–¹å¼è®¤è¯ï¼šHTTPTokenAuth(scheme='Bearer')ï¼Œä»¤ç‰ŒBearerï¼ŒTokenï¼šsecret-token-1ï¼Œåªæœ‰è¯·æ±‚ä¸­æ»¡è¶³è¿™ä¸ªè®¤è¯ï¼Œåˆ™é€šè¿‡ï¼Œæµ‹è¯•æ–¹æ³•ï¼šcurl -X GET -H "Authorization: **Bearer secret-token-1**" http://localhost:5000/
+å…³äºå®‰å…¨è®¤è¯å…¶ä»–æ–¹æ³•å¯å‚è€ƒï¼š[å®‰å…¨è®¤è¯](!https://blog.csdn.net/JackLiu16/article/details/82730727)
 ```
 #!/usr/bin/python3  
 # encoding: utf-8  
@@ -120,7 +121,7 @@ if __name__ == '__main__':
 @software: PyCharm 
 @file: authSafety.py 
 @time: 2019/7/4 16:00 
-@describe: flask ÇëÇó°²È«ÈÏÖ¤
+@describe: flask è¯·æ±‚å®‰å…¨è®¤è¯
 """
 import sys
 import os
@@ -132,15 +133,15 @@ from werkzeug.security import generate_password_hash, check_password_hash
 sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '..'))
 sys.path.append("..")
 
-# ÓÃ»§ÃûÃÜÂë·½Ê½ÈÏÖ¤
+# ç”¨æˆ·åå¯†ç æ–¹å¼è®¤è¯
 basic_auth = HTTPBasicAuth()
-# ÁîÅÆ£¨Token£©ÈÏÖ¤
+# ä»¤ç‰Œï¼ˆTokenï¼‰è®¤è¯
 token_auth = HTTPTokenAuth(scheme='Bearer')
-# ÒÔÉÏÁ½ÖÖ¶àÖØÈÏÖ¤-ÈôÆÚÖĞÖ®Ò»Í¨¹ı£¬ÔòÈÏÖ¤Í¨¹ı
+# ä»¥ä¸Šä¸¤ç§å¤šé‡è®¤è¯-è‹¥æœŸä¸­ä¹‹ä¸€é€šè¿‡ï¼Œåˆ™è®¤è¯é€šè¿‡
 multi_auth = MultiAuth(basic_auth, token_auth)
 
 users = [
-    {'username': 'Tom', 'password': generate_password_hash('111111')},  # »ìÏıÃÜÂë,¶ÔÓÚ¸ø¶¨µÄ×Ö·û´®£¬Éú³ÉÆä¼ÓÑÎµÄ¹şÏ£Öµ
+    {'username': 'Tom', 'password': generate_password_hash('111111')},  # æ··æ·†å¯†ç ,å¯¹äºç»™å®šçš„å­—ç¬¦ä¸²ï¼Œç”Ÿæˆå…¶åŠ ç›çš„å“ˆå¸Œå€¼
     {'username': 'kevin', 'password': generate_password_hash('123456')}
 ]
 
@@ -153,7 +154,7 @@ tokens = {
 @token_auth.verify_token
 def verify_token(token):
     """
-    tokenÈÏÖ¤
+    tokenè®¤è¯
         curl -X GET -H "Authorization: Bearer secret-token-1" http://localhost:5000/
     :param token: Bearer secret-token-1
     :return:
@@ -166,10 +167,10 @@ def verify_token(token):
 @token_auth.error_handler
 def unauthorized():
     """
-    ÈÏÖ¤Ê§°Ü
-        flask ĞèÒªÒÔreturn ÕâÖÖ·½Ê½·µ»Ø×Ô¶¨ÒåÒì³£
+    è®¤è¯å¤±è´¥
+        flask éœ€è¦ä»¥return è¿™ç§æ–¹å¼è¿”å›è‡ªå®šä¹‰å¼‚å¸¸
             return make_response(jsonify({'error': 'Not Find'}), 401)
-        flask_restful ÔòĞŞ¸Äabort·½Ê½·µ»Ø×Ô¶¨ÒåÒì³£
+        flask_restful åˆ™ä¿®æ”¹abortæ–¹å¼è¿”å›è‡ªå®šä¹‰å¼‚å¸¸
             abort(401, message={'error': 'Unauthorized access'})
     :return:
     """
@@ -179,7 +180,7 @@ def unauthorized():
 @basic_auth.verify_password
 def verify_password(username, password):
     """
-    ÓÃ»§ÃûÃÜÂëÈÏÖ¤
+    ç”¨æˆ·åå¯†ç è®¤è¯
         curl -u Tom:111111 -i -X GET http://localhost:5000/
     :param username:
     :param password:
@@ -197,17 +198,17 @@ def unauthorized():
     abort(401, message={'error': 'Unauthorized access'})
 ```
 
-## flask-restfulÊµÏÖrestful
-[¹ÙÍø¼ò½é](!http://www.pythondoc.com/flask-restful/second.html)£¬ ¶ÔÓÚÕâ²¿·ÖÒòÎªÓĞÖĞÎÄ¹ÙÍø£¬²¢ÇÒ½éÉÜºÜÏêÏ¸£¬¿ÉÒÔÖ±½Ó²éÔÄ²»Í¬·½·¨ÊµÏÖ¡£
-Ê¾Àı´úÂëÖĞrestful·ç¸ñÊµÏÖºÍÍøÉÏÀı×ÓÎŞ¶à´ó²î±ğ£¬Ö÷ÒªÊÇ°²È«ÈÏÖ¤²¿·Ö½øĞĞ¼òµ¥±àĞ´£¬ÒòÎªÀı×ÓÖĞËùÓĞÃÜÂë»òÈÏÖ¤¶¼²ÉÓÃÄÚ´æ·½Ê½Ö±½ÓÓ²±àÂëµ½´úÂëÖĞ£¬ËùÒÔAuthSafety·½·¨ÖĞÓĞÒ»¶Î¶ÁÈ¡ÎÄ¼ş¼ÓÃÜ£¬¿ÉÒÔ×ÔĞĞ³¢ÊÔ¡£
-¶ÔÓÚflask-restfulÖĞ°²È«ÈÏÖ¤£¬¹ÙÍøÖĞ½éÉÜºÜ¼òµ¥£¬ÆäÊµ¾ÍÊÇÔÚÀàÖĞÖ±½ÓÉùÃ÷Ò»¾ä£ºdecorators = [multi_auth.login_required]  # flask_restful °²È«ÈÏÖ¤·½Ê½£¬ÀàËÆÓÚflask×¢½â£¬È«¾ÖÈÏÖ¤£¬Ïê¼ûÏÂÃæ´úÂë£¬multi_auth²ÉÓÃÉÏÃæ´úÂëÖĞ£¬ÁªºÏÈÏÖ¤·½Ê½¡£µ«ÊÇÕâÖÖÈ«¾ÖÈÏÖ¤Ò²ÓĞ²»×ã£¬±ÈÈçÎÒÃÇÖ»ÏëÔÚdelete·½·¨ÖĞ¼Ó°²È«ÈÏÖ¤£¬get·½·¨ÖĞ²»¼ÓÔõÃ´°ì£¬ÄÇÃ´¾Í²»ÄÜ²ÉÓÃÈ«¾ÖÈÏÖ¤·½Ê½£¬ÆäÊÇflask-restful»¹ÊÇ»ùÓÚflaskµÄ·â×°£¬ËùÒÔÒÀ¾É¿ÉÒÔ²ÉÓÃflaskÔ­Éú·½Ê½½øĞĞÈÏÖ¤£¬ÈçÏÂÃæ´úÂëget·½Ê½ÖĞµÄ£º 
+## flask-restfulå®ç°restful
+[å®˜ç½‘ç®€ä»‹](!http://www.pythondoc.com/flask-restful/second.html)ï¼Œ å¯¹äºè¿™éƒ¨åˆ†å› ä¸ºæœ‰ä¸­æ–‡å®˜ç½‘ï¼Œå¹¶ä¸”ä»‹ç»å¾ˆè¯¦ç»†ï¼Œå¯ä»¥ç›´æ¥æŸ¥é˜…ä¸åŒæ–¹æ³•å®ç°ã€‚
+ç¤ºä¾‹ä»£ç ä¸­restfulé£æ ¼å®ç°å’Œç½‘ä¸Šä¾‹å­æ— å¤šå¤§å·®åˆ«ï¼Œä¸»è¦æ˜¯å®‰å…¨è®¤è¯éƒ¨åˆ†è¿›è¡Œç®€å•ç¼–å†™ï¼Œå› ä¸ºä¾‹å­ä¸­æ‰€æœ‰å¯†ç æˆ–è®¤è¯éƒ½é‡‡ç”¨å†…å­˜æ–¹å¼ç›´æ¥ç¡¬ç¼–ç åˆ°ä»£ç ä¸­ï¼Œæ‰€ä»¥AuthSafetyæ–¹æ³•ä¸­æœ‰ä¸€æ®µè¯»å–æ–‡ä»¶åŠ å¯†ï¼Œå¯ä»¥è‡ªè¡Œå°è¯•ã€‚
+å¯¹äºflask-restfulä¸­å®‰å…¨è®¤è¯ï¼Œå®˜ç½‘ä¸­ä»‹ç»å¾ˆç®€å•ï¼Œå…¶å®å°±æ˜¯åœ¨ç±»ä¸­ç›´æ¥å£°æ˜ä¸€å¥ï¼šdecorators = [multi_auth.login_required]  # flask_restful å®‰å…¨è®¤è¯æ–¹å¼ï¼Œç±»ä¼¼äºflaskæ³¨è§£ï¼Œå…¨å±€è®¤è¯ï¼Œè¯¦è§ä¸‹é¢ä»£ç ï¼Œmulti_authé‡‡ç”¨ä¸Šé¢ä»£ç ä¸­ï¼Œè”åˆè®¤è¯æ–¹å¼ã€‚ä½†æ˜¯è¿™ç§å…¨å±€è®¤è¯ä¹Ÿæœ‰ä¸è¶³ï¼Œæ¯”å¦‚æˆ‘ä»¬åªæƒ³åœ¨deleteæ–¹æ³•ä¸­åŠ å®‰å…¨è®¤è¯ï¼Œgetæ–¹æ³•ä¸­ä¸åŠ æ€ä¹ˆåŠï¼Œé‚£ä¹ˆå°±ä¸èƒ½é‡‡ç”¨å…¨å±€è®¤è¯æ–¹å¼ï¼Œå…¶æ˜¯flask-restfulè¿˜æ˜¯åŸºäºflaskçš„å°è£…ï¼Œæ‰€ä»¥ä¾æ—§å¯ä»¥é‡‡ç”¨flaskåŸç”Ÿæ–¹å¼è¿›è¡Œè®¤è¯ï¼Œå¦‚ä¸‹é¢ä»£ç getæ–¹å¼ä¸­çš„ï¼š 
 
 ```
-# @multi_auth.login_required  # Á½ÖÖ×ÛºÏÈÏÖ¤·½Ê½£¬Âú×ãÆäÒ»¼´¿É
+# @multi_auth.login_required  # ä¸¤ç§ç»¼åˆè®¤è¯æ–¹å¼ï¼Œæ»¡è¶³å…¶ä¸€å³å¯
 def get(self, todo_id):
 ```
-ÕâÑù±ã¿ÉÊµÏÖÖ»ÔÚget·½Ê½ÖĞ¼Ó°²È«ÈÏÖ¤£¬ÆäËû·½·¨×ÔÓÉ¿ØÖÆÁË¡£
-ÍêÕû´úÂë
+è¿™æ ·ä¾¿å¯å®ç°åªåœ¨getæ–¹å¼ä¸­åŠ å®‰å…¨è®¤è¯ï¼Œå…¶ä»–æ–¹æ³•è‡ªç”±æ§åˆ¶äº†ã€‚
+å®Œæ•´ä»£ç 
 ```
 #!/usr/bin/python3  
 # encoding: utf-8  
@@ -219,10 +220,10 @@ def get(self, todo_id):
 @software: PyCharm 
 @file: flaskRestFul.py
 @time: 2019/7/3 18:17 
-@describe: flask_restful Restful ·ç¸ñ
+@describe: flask_restful Restful é£æ ¼
 pip install flask-restful
-²Î¿¼×Ô£º°²È«ÈÏÖ¤£ºhttps://blog.csdn.net/JackLiu16/article/details/82730727
-flask_restful¹Ù·½¼ò½é£ºhttp://www.pythondoc.com/flask-restful/second.html
+å‚è€ƒè‡ªï¼šå®‰å…¨è®¤è¯ï¼šhttps://blog.csdn.net/JackLiu16/article/details/82730727
+flask_restfulå®˜æ–¹ç®€ä»‹ï¼šhttp://www.pythondoc.com/flask-restful/second.html
 """
 import sys
 import os
@@ -245,10 +246,10 @@ TODOS = {
 }
 
 
-# ¼ìË÷ÊÇ·ñÓĞ×ÊÔ´
+# æ£€ç´¢æ˜¯å¦æœ‰èµ„æº
 def abort_if_todo_doesnt_exist(todo_id):
     if todo_id not in TODOS:
-        abort(404, message="Ëù²é×ÊÔ´²»´æÔÚ".format(todo_id))
+        abort(404, message="æ‰€æŸ¥èµ„æºä¸å­˜åœ¨".format(todo_id))
 
 
 def not_found():
@@ -266,20 +267,20 @@ parser.add_argument('auth_value', type=str)
 
 
 class Todo(Resource):
-    decorators = [multi_auth.login_required]  # flask_restful °²È«ÈÏÖ¤·½Ê½£¬ÀàËÆÓÚflask×¢½â£¬È«¾ÖÈÏÖ¤
-    '''²ÉÓÃflask×¢½â·½Ê½ÈÏÖ¤£¬ÄÇ¸ö·½·¨ĞèÒªÈÏÖ¤£¬Ôò½«×¢½â¼Óµ½´Ë´¦'''
+    decorators = [multi_auth.login_required]  # flask_restful å®‰å…¨è®¤è¯æ–¹å¼ï¼Œç±»ä¼¼äºflaskæ³¨è§£ï¼Œå…¨å±€è®¤è¯
+    '''é‡‡ç”¨flaskæ³¨è§£æ–¹å¼è®¤è¯ï¼Œé‚£ä¸ªæ–¹æ³•éœ€è¦è®¤è¯ï¼Œåˆ™å°†æ³¨è§£åŠ åˆ°æ­¤å¤„'''
 
-    # @basic_auth.login_required  # ÓÃ»§ÃûÃÜÂëÈÏÖ¤·½Ê½
-    # @token_auth.login_required  # tokenÈÏÖ¤·½Ê½
-    # @multi_auth.login_required  # Á½ÖÖ×ÛºÏÈÏÖ¤·½Ê½£¬Âú×ãÆäÒ»¼´¿É
+    # @basic_auth.login_required  # ç”¨æˆ·åå¯†ç è®¤è¯æ–¹å¼
+    # @token_auth.login_required  # tokenè®¤è¯æ–¹å¼
+    # @multi_auth.login_required  # ä¸¤ç§ç»¼åˆè®¤è¯æ–¹å¼ï¼Œæ»¡è¶³å…¶ä¸€å³å¯
     def get(self, todo_id):
         """
         curl -X GET -H "Authorization: Bearer secret-token-1" http://localhost:5000/todos/todo1
         curl -u Tom:111111 -i -X GET http://localhost:5000/todos/todo1
-        :param todo_id: todo1,¼ìË÷¹Ø¼ü×Ö
+        :param todo_id: todo1,æ£€ç´¢å…³é”®å­—
         :return:
         """
-        abort_if_todo_doesnt_exist(todo_id)  # Èç¹û×ÊÔ´²»´æÔÚ
+        abort_if_todo_doesnt_exist(todo_id)  # å¦‚æœèµ„æºä¸å­˜åœ¨
         return TODOS[todo_id]
 
     def delete(self, todo_id):
@@ -299,7 +300,7 @@ class TodoList(Resource):
 
     def get(self):
         if len(TODOS) == 0:
-            not_found()  # ÎŞ×ÊÔ´
+            not_found()  # æ— èµ„æº
         return TODOS
 
     def post(self):
@@ -311,12 +312,12 @@ class TodoList(Resource):
 
 
 class AuthSafety(Resource):
-    """ÈÏÖ¤ÓÃ»§×¢²á"""
+    """è®¤è¯ç”¨æˆ·æ³¨å†Œ"""
 
     def post(self, auth_type):
         """
-        ×¢²áĞÂÓÃ»§
-        :param auth_type: name£ºĞÕÃûÃÜÂë·½Ê½×¢²á£»token£ºtoken·½Ê½×¢²á
+        æ³¨å†Œæ–°ç”¨æˆ·
+        :param auth_type: nameï¼šå§“åå¯†ç æ–¹å¼æ³¨å†Œï¼›tokenï¼štokenæ–¹å¼æ³¨å†Œ
         :return:
         """
         args = parser.parse_args()
@@ -343,7 +344,7 @@ class AuthSafety(Resource):
         return dict_pwd
 
 
-# ÉèÖÃÂ·ÓÉ¹æÔò
+# è®¾ç½®è·¯ç”±è§„åˆ™
 api.add_resource(TodoList, '/todos')
 api.add_resource(Todo, '/todos/<todo_id>')
 api.add_resource(AuthSafety, '/auth/<auth_type>')
